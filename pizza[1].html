@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+    <header>
+        <h1>Pizza Order Form</h1>
+    </header>
+
+    <main>
+       <form action="order_confirmation.php" method="post">
+        <feildset>
+            <legend>Your Information</legend>
+            <label for="name">Name:</label>
+            <input type="next" id="name" name="name" required><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            </feildset>
+
+            <fieldset>
+                <legend>Pizza Details</legend>
+                <label for="num_pizzas">Number of Pizzas:</label>
+                <input type="number" id="num_pizzas" name="num_pizzas" min="1" max="10" required><br><br>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    </select><br><br>
+
+                    <label>Shape:</label><br>
+                    <input type="radio" id="round" name="shape" value="round" checked>
+                    <label for="round">Round</label><br>
+                    <input type="radio" id="square" name="shape" value="square">
+                    <label for="square">Square</label><br><br>
+
+                    <label for="toppings">Toppings:</label><br>
+                    <input type="checkbox" id="pepperoni" name="toppings[]" value="pepproni">
+                    <label for="pepperoni">Pepperoni</label><br>
+                    <input type="checkbox" id="mushroom" name="toppings[]" value="mushrooms">
+                    <label for="mushrooms">Mushrooms</label><br>
+
+                    <br>
+
+                    <label for="crust">Crust Type:</label><br>
+                    <select id="crust" name="crust" required>
+                        <option value="deep_dish">Deep Dish</option>
+                        <option value="thin_crust">Thin Crust</option>
+                        <option value="regular">Regular</option>
+                        </select><br><br>
+
+                        <label for="delivery_method">Delivery Method:</label><br>
+                        <input type="radio" id="take_out" name="delivery_method" value="take_out" checked>
+                        <label for="take_out">Take Out</label><br>
+                        <input type="radio" id="delivery" name="delivery_method" value="delivery">
+                        <label for="delivery">Delivery</label><br>
+                        <input type="radio" id="eat_in" name="delivery_method" value="eat_in">
+                        <label for="eat_in">Eat In</label><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </fieldset>
+            <input type="submit" value="Place Order">
+            <input type="Reset" value="Reset">
+            </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizza House</p>
+    </footer>
+    <img src="C:\Users\Inder\Downloads\pizza-3007395_1280.jpg"  alt="Delicious Pizza"  width="100" height="60"> 
+</body>
+</html>
